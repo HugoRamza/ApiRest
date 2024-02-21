@@ -1,0 +1,37 @@
+function Promesa1() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject('Uno');
+        }, 1000);
+    });
+}
+
+Promesa1()
+    .then(result => console.log(result))
+    .catch(error => console.error(error));
+
+function Promesa2() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject('Dos');
+        }, 1000);
+    });
+}
+
+Promesa2()
+    .then(result => console.log(result))
+    .catch(error => console.error(error));
+
+function Promesa3() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject('Tres');
+        }, 1000);
+    });
+}
+
+Promesa3()
+    .then(result => console.log(result))
+    .catch(error => console.error(error));
+
+Promise.all
